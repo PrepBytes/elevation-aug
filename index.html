@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Backtracking</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Backtracking</h1>
+    <div class="para_body">
+      <p class="new_para">Copyright ©2002 by David Matuszek</p>
+      <p class="new_para_2">Backtracking is a form of recursion.</p>
+      <p id="new_para_id">
+        The usual scenario is that you are faced with a number of options, and
+        you must choose one of these. After you make your choice you will get a
+        new set of options; just what set of options you get depends on what
+        choice you made. This procedure is repeated over and over until you
+        reach a final state. If you made a good sequence of choices, your final
+        state is a goal state; if you didn't, it isn't.
+      </p>
+    </div>
+
+    <p class="new_para">
+      Conceptually, you start at the root of a tree; the tree probably has some
+      good leaves and some bad leaves, though it may be that the leaves are all
+      good or all bad. You want to get to a good leaf. At each node, beginning
+      with the root, you choose one of its children to move to, and you keep
+      this up until you get to a leaf.
+    </p>
+
+    <p>
+      Suppose you get to a bad leaf. You can backtrack to continue the search
+      for a good leaf by revoking your most recent choice, and trying out the
+      next option in that set of options. If you run out of options, revoke the
+      choice that got you here, and try another choice at that node. If you end
+      up at the root with no options left, there are no good leaves to be found.
+    </p>
+
+    <center>
+      <img
+        src="https://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking_files/treesearch.gif"
+      />
+    </center>
+
+    <!-- <ol>
+      <li>Starting at Root, your options are A and B.</li>
+      <li>You choose A. At A, your options are C and D.</li>
+      <li>
+        You choose C. C is bad. Go back to A. At A, you have already tried C,
+        and it failed. Try D. D is bad. Go back to A.
+      </li>
+    </ol>
+
+    <ul>
+      <li>Starting at Root, your options are A and B.</li>
+      <li>You choose A. At A, your options are C and D.</li>
+      <li>
+        You choose C. C is bad. Go back to A. At A, you have already tried C,
+        and it failed. Try D. D is bad. Go back to A.
+      </li>
+    </ul> -->
+    <button>Know More</button>
+
+    <div class="box_container"></div>
+
+    <a href="https://www.prepbytes.com">Author</a>
+    <script src="./index.js"></script>
+  </body>
+</html>
